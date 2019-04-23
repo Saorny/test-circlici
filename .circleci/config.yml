@@ -1,6 +1,8 @@
 version: 2
 jobs:
   build:
+    machine:
+      enabled: true
     steps:
     - run: sh ./deploy.sh
   deploy:
