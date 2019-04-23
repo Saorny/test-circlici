@@ -1,15 +1,23 @@
-version: 2.1
-
-orbs:
-  hello: circleci/hello-build@0.0.7
+version: 2
+jobs:
+  build:
+  deploy:
+    machine:
+      enabled: true
+    steps:
+    - run:
+        name: Deploy Over SSH
+        command: |
+          ssh $SSH_USER@$SSH_HOST "<remote deploy command>"
 
 workflows:
-  "Hello Workflow":
+  version: 2
+  build-and-deploy:
     jobs:
-    - hello/hello-build
-
-environment:
-   SERVER_IP_ADDRESS: 47.100.104.10
-   DOKKU_APP: circlecidemo
-   TRAVIS: "false"
-
+    - build
+    - deploy:
+        requires:
+        - build
+        filters:
+          branches:
+            only: master
