@@ -1,0 +1,23 @@
+{
+  "name": "learn-circleci",
+  "version": "1.0.0",
+  "description": "![circle-ci-logo](https://user-images.githubusercontent.com/194400/41597205-a57442ea-73c4-11e8-9591-61f5c83c7e66.png)",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node hello.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Saorny/test-circlici.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Saorny/test-circlici/issues"
+  },
+  "homepage": "https://github.com/Saorny/test-circlici#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
