@@ -3,9 +3,6 @@ version: 2.1
 jobs:
   build:
     working_directory: /home/wcn/test
-    docker:
-      - image: circleci/node:4.8.2-jessie
-      - image: mongo:3.4.4-jessie
     steps:
       - checkout
       - run:
