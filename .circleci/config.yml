@@ -1,9 +1,11 @@
 version: 2
 jobs:
   build:
-    machine:
-      enabled: true
+    working_directory: ~/learn-circleci
+    docker:
+    - image: circleci/node:4.8.2
     steps:
+    - checkout
     - run: pwd
     - run: ls -l
     - run: cd ..;ls -l
