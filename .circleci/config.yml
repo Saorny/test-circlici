@@ -8,7 +8,7 @@ jobs:
     - checkout
     - run: pwd
     - run: ls -l
-    - run: sh ./deploy.sh
+    - run: sh ./build.sh
   deploy:
     machine:
       enabled: true
