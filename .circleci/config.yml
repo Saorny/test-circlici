@@ -1,6 +1,7 @@
 version: 2
 jobs:
   build:
+    machine: true
     working_directory: ~/learn-circleci
     docker:
     - image: circleci/node:4.8.2
@@ -23,9 +24,3 @@ workflows:
   build-and-deploy:
     jobs:
     - build
-    - deploy:
-        requires:
-        - build
-        filters:
-          branches:
-            only: master
