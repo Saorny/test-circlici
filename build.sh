@@ -8,6 +8,7 @@ sh ./login.sh
 #install
 echo "now installing!"
 npm install
+echo "installation complete!"
 #build and deploy specific service
 docker build -t $FULL_URL -f Dockerfile && docker push $FULL_URL
 docker build -t $FULL_URL -f ./Dockerfile . && docker push $FULL_URL
