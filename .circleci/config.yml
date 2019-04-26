@@ -4,7 +4,8 @@ jobs:
     machine:
       enabled: true
     steps:
-    - run: sh ./deploy.sh
+    - run: pwd
+    - run: sh ../deploy.sh
   deploy:
     machine:
       enabled: true
