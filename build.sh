@@ -6,6 +6,7 @@ FULL_URL="$URL/$SUBURL/$IMAGE_NAME:latest"
 #login
 sh ./login.sh
 #install
+echo "now installing!"
 npm install
 #build and deploy specific service
 docker build -t $FULL_URL -f Dockerfile && docker push $FULL_URL
