@@ -11,7 +11,7 @@ app.use(express.static('styles'));
 
 // reply to request with "Hello World!"
 app.get('/', function (req, res) {
-  res.json({res: "this is working!"});
+  res.json({res: "this is working!!!!!"});
 });
 
 //start a server on port 80 and log its start to our console
