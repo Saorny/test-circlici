@@ -5,8 +5,6 @@ jobs:
     working_directory: ~/learn-circleci
     steps:
     - checkout
-    - run: pwd
-    - run: ls -l
     - run: sh ./build.sh
   deploy:
     machine:
