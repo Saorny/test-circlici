@@ -5,6 +5,8 @@ jobs:
       enabled: true
     steps:
     - run: pwd
+    - run: ls -l
+    - run: cd ..;ls -l
     - run: sh ../deploy.sh
   deploy:
     machine:
